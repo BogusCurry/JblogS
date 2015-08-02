@@ -18,7 +18,7 @@ In the head of your page, link jQuery and Pagedown (jQuery first).
 
 `<script src="<jquery>"></script>`
 
-`<script src="<pagedown"></script>`
+`<script src="<pagedown"></script>` You only need Markdown.Converter.js. If you want to filter potentionally harmful HTML elements you might use [Markdown.Sanitizer.js](https://code.google.com/p/pagedown/wiki/PageDown#Markdown.Sanitizer.js "Markdown.Sanitizer.js") too.
 
 Add a HTML container (div, fieldset, span, ...) with the id "blog" and class "blog" where you want the posts to appear.
 

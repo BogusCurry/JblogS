@@ -8,6 +8,7 @@ for (entry of blogEntries) {
     
     elem.load(entry, function(data) {
 	var text = converter.makeHtml(data);
+	text += "<hr>";
         this.innerHTML = text;
     });
 }

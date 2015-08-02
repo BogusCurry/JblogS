@@ -1,12 +1,13 @@
 var converter = new Markdown.Converter();
 
-var blog = "";
-
-for (i = 0; i < blogEntries.length; i++) {
-	$("#blog").load(blogEntries[i], function(data) {
-		var text = converter.makeHtml(data);
-		blog += text;
-		blog += "<hr>";
-		document.getElementById("blog").innerHTML=blog;
-	});
+for (entry of blogEntries) {
+    var id = "entry-" + entry;
+    var elem = $("<p id='" + id + "'/>");
+    
+    $("#blog").append(elem);
+    
+    elem.load(entry, function(data) {
+	var text = converter.makeHtml(data);
+        this.innerHTML = text;
+    });
 }

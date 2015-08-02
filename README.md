@@ -36,4 +36,4 @@ You know where to store your blog posts? Let's say you created a folder called '
 
 `var blogEntries = ["posts/post2.txt","posts/post1.txt"];`
 
-Now you should be done.
+Now it should work

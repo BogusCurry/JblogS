@@ -9,6 +9,8 @@ border-width:1px;
 border-radius:8px;
 background:rgb(7,7,7);
 color:white;
+padding:8px;
+margin:8px;
 }
 
 .jblogs-blogpost {
@@ -16,8 +18,21 @@ border-style:solid;
 border-color:gray;
 border-width:1px;
 border-radius:8px;
+padding:4px;
+margin:4px;
 }
 
 .jblogs-metadata {
 text-decoration:underline;
+}
+
+a {
+  color:white;
+  text-decoration:none;
+  font-weight:lighter;
+}
+
+a:hover {
+  font-decoration:underline;
+  font-weight:normal;
 }

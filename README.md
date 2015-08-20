@@ -45,3 +45,7 @@ JblogS uses the file `JblogS Settings.js` to store its settings. At the moment t
 ## Metadata
 
 You can use a BBCode-like tag `[metadata=<Author>;<Date>]` to store __who__ wrote thisthe post, and __when__. `[metadata=HashtagMC;20.08.2015]` will be replaced with 'Written by HashtagMC at 20.08.2015'. The strings (written by and at) can be changed in the config file (JblogS Settings.js).
+
+## CSS
+
+You can easily customize JblogS with CSS. The div that contains all posts has the id "blog". Every blog post has the class "jblogs-blogpost" and the metadata of every post (author, date) have the class "jblogs-metadata".

@@ -7,7 +7,7 @@ border-style:solid;
 border-color:gray;
 border-width:1px;
 border-radius:8px;
-background:rgb(7,7,7);
+background:rgb(63,63,63);
 color:white;
 padding:8px;
 margin:8px;
@@ -29,10 +29,9 @@ text-decoration:underline;
 a {
   color:white;
   text-decoration:none;
-  font-weight:lighter;
+  font-weight:bold;
 }
 
 a:hover {
-  font-decoration:underline;
-  font-weight:normal;
+  text-decoration:underline;
 }

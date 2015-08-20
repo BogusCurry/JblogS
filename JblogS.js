@@ -1,14 +1,18 @@
 var converter = new Markdown.Converter();
 
-for (entry of blogEntries) {
-    var id = "entry-" + entry;
-    var elem = $("<p id='" + id + "'/>");
-    
-    $("#blog").append(elem);
-    
-    elem.load(entry, function(data) {
-	var text = converter.makeHtml(data);
-	text += "<hr>";
-        this.innerHTML = text;
-    });
+var blog = "";
+
+for (i = 0; i < blogEntries.length; i++) {
+	$("#blog").load(blogEntries[i], function(data) {
+		var text = converter.makeHtml(data);
+		blog += text;
+		blog = metadata(blog);
+		blog += "<hr>";
+		document.getElementById("blog").innerHTML=blog;
+	});
+}
+
+function metadata(blogpost) {
+	blogpost = blogpost.replace(/\[metadata=(.*)[;](.*)\]/, "<p>"+authorstring+" "+'$1'+" "+datestring+" "+'$2'+"</p>", "gi");
+	return blogpost;
 }

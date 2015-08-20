@@ -1,1 +1,1 @@
-var blogEntries = ["post2.txt","post1.txt"];
+var blogEntries = ["25-07-2015.txt","24-07-2015.txt"];

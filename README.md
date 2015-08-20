@@ -24,11 +24,11 @@ Add a HTML container (div, fieldset, span, ...) with the id "blog" and class "bl
 
 `<div id="blog" class="blog"></div>`
 
-Link the scripts JblogSEntries.js and JblogS.js __at the bottom of the page__.
+Link the scripts `JblogSEntries.js`, `JblogS Settings.js` and `JblogS.js` . JblogS at the bottom of the page, JblogSEntries and Settings in the head of the html page.
 
-`<script src="<JblogSEntries>" defer></script>`
+`<script src="<JblogSEntries>"></script> <script src="<JblogS Settings.js>"></script></head>`
 
-`<script src="<JblogS>" defer></script>`
+`<script src="<JblogS>" defer></script></body>`
 
 It's important that you link JblogSEntries first, as JblogS can't load files from the array defined in JblogSEntries before JblogSEntries is loaded.
 
@@ -36,4 +36,12 @@ You know where to store your blog posts? Let's say you created a folder called '
 
 `var blogEntries = ["posts/post2.txt","posts/post1.txt"];`
 
-Now it should work
+Now it should work.
+
+## Settings
+
+JblogS uses the file `JblogS Settings.js` to store its settings. At the moment there are two values being stored: `authorstring` and `datestring`. Authorstring is "Written by" by default, datestring is "at" by default.
+
+## Metadata
+
+You can use a BBCode-like tag `[metadata=<Author>;<Date>]` to store __who__ wrote thisthe post, and __when__. `[metadata=HashtagMC;20.08.2015]` will be replaced with 'Written by HashtagMC at 20.08.2015'. The strings (written by and at) can be changed in the config file (JblogS Settings.js).

@@ -49,3 +49,9 @@ You can use a BBCode-like tag `[metadata=<Author>;<Date>]` to store __who__ wrot
 ## CSS
 
 You can easily customize JblogS with CSS. The div that contains all posts has the id "blog". Every blog post has the class "jblogs-blogpost" and the metadata of every post (author, date) have the class "jblogs-metadata".
+
+## Editor
+
+The file `Editor.html` provides textfields for title, author,
+date and text, automatically creating the [metadata]-tag and a level 2
+heading (title)

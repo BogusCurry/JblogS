@@ -12,9 +12,9 @@ for (entry of blogEntries) {
     $("#blog").append(elem);
     
     elem.load(entry, function(data) {
-	var text = converter.makeHtml(data);
-	text += "<hr>";
-	text = metadata(text);
+        var text = converter.makeHtml(data);
+        text += "<hr>";
+        text = metadata(text);
         this.innerHTML = text;
     });
 }

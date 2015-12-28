@@ -1,0 +1,34 @@
+html {
+    backround: rgb(31,31,31);
+    color: white;
+    text-align: left;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: gray;
+}
+
+.markdown-table-about {
+    border:1px solid white;
+    padding:10px;
+}
+
+.markdown-table-button {
+    align: bottom;
+}
+
+.markdown-table-help {
+    width: 25%;
+    border: 1px solid white;
+    padding: 25px;
+    vertical-align: top;
+}
+
+.markdown-table-text {
+    border: 1px solid white;
+    padding: 10px;
+}

@@ -1,73 +1,66 @@
-﻿<!doctype HTML>
+<!doctype HTML>
 <html>
+
 <head>
-<title>JblogS Editor</title>
-<style type="text/css">
-html {
-background:rgb(31,31,31);
-color:white;
-text-align:left;
-}
-
-a {
-color:white;
-}
-
-a:hover {
-color:gray;
-}
-</style>
-<meta charset="UTF-8"/>
-<meta name="Author" content="HashtagMC">
+    <title>JblogS Editor</title>
+    <meta charset="UTF-8" />
+    <meta name="Author" content="HashtagMC">
+    <link rel="stylesheet" href="css/editor.css" />
 </head>
+
 <body>
-<h1>JblogS Editor</h1>
-<table>
-<tr>
-<td style="border:1px solid white;padding:10px">
-<input type="text" id="Title" placeholder="Title" autofocus />
-<input type="text" id="Author" placeholder="Author" />
-<input type="text" id="Date" placeholder="Date" />
-<button style="align:bottom" type="button" onclick="outputtext();">JblogS your text</button>
-</td>
-<td style="width:25%;border:1px solid white;padding:25px" valign="top" rowspan="2">
-<h3>Markdown Markup Language:</h3>
-<ul>
-<li># Heading level 1
-<li>## Heading level 2
-<li>###Heading level 3
-<li>Paragraphs are seperated by a<br><br>blank line
-<li>*italic*
-<li>**bold**
-<li>`monospaces` (e.g. Source Code)
-<li>~~strikethrough~~
-<li>a [link](http://example.com)
-<li>* Item<br>* Item<br>* Item
-<li>1. Item 1<br>2. Item 2<br>3. Item 3
-</ul>
-</td>
-</tr>
-<tr>
-<td style="border:1px solid white;padding:10px">
-<textarea id="Entry" rows="32" cols="192">Type your text here...</textarea>
+    <h1>JblogS Editor</h1>
+    <table class="markdown-table">
+        <tr>
+            <td class="markdown-table-about">
+                <input type="text" id="Title" placeholder="Title" autofocus />
+                <input type="text" id="Author" placeholder="Author" />
+                <input type="text" id="Date" placeholder="Date" />
+                <button class="markdown-table-button" type="button" onclick="outputtext();">JblogS your text</button>
+            </td>
+            <td class="markdown-table-help" rowspan="2">
+                <h3>Markdown Markup Language:</h3>
+                <ul>
+                    <li># Heading level 1
+                    <li>## Heading level 2
+                    <li>###Heading level 3
+                    <li>Paragraphs are seperated by a < br /> blank line
+                    <li>*italic*
+                    <li>**bold**
+                    <li>`monospaces` (e.g. Source Code)
+                    <li>~~strikethrough~~
+                    <li>a [link](http://example.com)
+                    <li>* Item
+                    <br>* Item
+                    <br>* Item
+                    <li>1. Item 1
+                    <br>2. Item 2
+                    <br>3. Item 3
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="markdown-table-text">
+                <textarea id="Entry" rows="32" cols="192">Type your text here...</textarea>
 
-<textarea id="Output" rows="8" cols="192" readonly>Output here...</textarea>
-</td>
-</tr>
-<tr>
-</table>
+                <textarea id="Output" rows="8" cols="192" readonly>Output here...</textarea>
+            </td>
+        </tr>
+        <tr>
+    </table>
 
-<script type="text/javascript" defer>
-function outputtext(){
-	var title = document.getElementById("Title").value;
-	var author = document.getElementById("Author").value;
-	var date = document.getElementById("Date").value;
-	var entry = document.getElementById("Entry").value;
-	
-	var output = "##"+title+"\n\n[metadata="+author+";"+date+"]\n\n"+entry;
-	
-	document.getElementById("Output").value = output;
-}
-</script>
+    <script type="text/javascript" defer>
+        function outputtext() {
+            var title = document.getElementById("Title").value;
+            var author = document.getElementById("Author").value;
+            var date = document.getElementById("Date").value;
+            var entry = document.getElementById("Entry").value;
+
+            var output = "##" + title + "\n\n[metadata=" + author + ";" + date + "]\n\n" + entry;
+
+            document.getElementById("Output").value = output;
+        }
+    </script>
 </body>
+
 </html>

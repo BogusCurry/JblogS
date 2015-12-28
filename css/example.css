@@ -1,0 +1,37 @@
+html {
+    background: rgb(31, 31, 31);
+}
+
+#blog {
+    border-style:solid;
+    border-color:gray;
+    border-width:1px;
+    border-radius:8px;
+    background:rgb(63,63,63);
+    color:white;
+    padding:8px;
+    margin:8px;
+}
+
+.jblogs-blogpost {
+    border-style:solid;
+    border-color:gray;
+    border-width:1px;
+    border-radius:8px;
+    padding:4px;
+    margin:4px;
+}
+
+.jblogs-metadata {
+    text-decoration:underline;
+}
+
+a {
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+a:hover {
+    text-decoration:underline;
+}
